@@ -1,4 +1,4 @@
-// Find K Means of Loudacre device status locations
+// Find K Means of Network device status locations
 // 
 // Input data: file(s) with device status data (delimited by '|')
 // including latitude (13th field) and longitude (14th field) of device locations 
@@ -33,7 +33,7 @@ def closestPoint(p: (Double,Double), points: Array[(Double,Double)]): Int = {
 }
 
 // The device status data file(s)
-val filename = "/loudacre/devicestatus_etl/*"
+val filename = "/network/devicestatus_etl/*"
 
 // K is the number of means (center points of clusters) to find
 val K = 5
