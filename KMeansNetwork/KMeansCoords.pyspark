@@ -1,4 +1,4 @@
-#  Find K Means of Loudacre device status locations
+#  Find K Means of a Network device status locations
 # 
 # Input data: file(s) with device status data (delimited by '|')
 # including latitude (13th field) and longitude (14th field) of device locations 
@@ -28,7 +28,7 @@ def addPoints(p1,p2):
     return [p1[0] + p2[0], p1[1] + p2[1]]
 
 # The files with device status data
-filename = "/loudacre/devicestatus_etl/*"
+filename = "/network/devicestatus_etl/*"
     
 # K is the number of means (center points of clusters) to find
 K = 5
