@@ -1,0 +1,24 @@
+Start Kafka
+
+1) bin/zookeeper-server-start.sh config/zookeeper.properties
+2) bin/kafka-server-start.sh config/server.properties
+
+Create topic
+
+3) bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic salestopic
+
+start hbase and create table
+
+4) create 'salesdata', 'count'
+
+Run the projects in IDE
+
+5) Run the projects in Scala IDE
+
+Note : Please follow the below steps to add the jars given in jar directory
+
+1) Add metrics-core and google-collection jars to Final Project
+
+2) Add jcommon and jfreechart jars to Visualization project
+
+
