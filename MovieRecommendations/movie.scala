@@ -13,7 +13,7 @@ val conf = new SparkConf().setAppName("MovieLensALS").setMaster("local[2]")
 
 val sc = new SparkContext(conf)
 
-val rawData = sc.textFile("/home/edureka/ml-100k/u.data")
+val rawData = sc.textFile("/home/ml-100k/u.data")
 
 //rawData.first()
 
@@ -43,7 +43,7 @@ val topKRecs = model.recommendProducts(userId, K)
 println(topKRecs.mkString("\n"))
 
 
-val movies = sc.textFile("/home/edureka/ml-100k/u.item")
+val movies = sc.textFile("/home/ml-100k/u.item")
 val titles = movies.map(line => line.split("\\|").take(2)).map(array => (array(0).toInt,array(1))).collectAsMap()
 titles(123)
 
