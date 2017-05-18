@@ -7,7 +7,7 @@ def countFileType(s):
     elif '.html' in s: htmlcount.add(1)
     elif '.css' in s: csscount.add(1)
 
-filename="/loudacre/weblogs/*"
+filename="/network/weblogs/*"
 
 logs = sc.textFile(filename)
 logs.foreach(lambda line: countFileType(line))
